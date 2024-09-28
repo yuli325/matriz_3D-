@@ -1,0 +1,27 @@
+def capturar_libros():
+ libros = []  # Lista para almacenar los libros
+ nombre = "Urología"
+    categoria = "Salud"
+    anio_publicacion = 2008
+    numero_hojas = 318
+    autor = "Dr. Mariano Valverde Medel"
+libro = {"nombre": nombre,
+        "categoria": categoria,
+        "anio_publicacion": anio_publicacion,
+        "numero_hojas": numero_hojas,
+        "autor": autor
+    }
+libros.append(libro)
+
+    return libros
+def imprimir_libros(libros):
+    print("\nListado de libros:")
+    for libro in libros:
+        print(f"Nombre: {libro['nombre']}, "
+              f"Categoría: {libro['categoria']}, "
+              f"Año de publicación: {libro['anio_publicacion']}, "
+              f"Número de hojas: {libro['numero_hojas']}, "
+              f"Autor: {libro['autor']}")
+if __name__ == "__main__":
+    libros = capturar_libros()
+    imprimir_libros(libros)
